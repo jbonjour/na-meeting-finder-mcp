@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Find an NA Meeting</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header>
+  <h1>Find an NA Meeting</h1>
+  <p>Portland metro area &mdash; Narcotics Anonymous</p>
+</header>
+
+<div id="chat" role="log" aria-live="polite" aria-label="Conversation">
+  <!-- Messages rendered by app.js -->
+</div>
+
+<div id="suggestions" aria-label="Quick searches">
+  <button class="chip" data-query="Meetings tonight">Meetings tonight</button>
+  <button class="chip" data-query="Open meetings this weekend">Open meetings this weekend</button>
+  <button class="chip" data-query="Early morning meetings">Early morning meetings</button>
+  <button class="chip" data-query="Online meetings">Online meetings</button>
+</div>
+
+<div id="input-area" role="form" aria-label="Search input">
+  <textarea
+    id="query"
+    placeholder="Ask about meetings… (e.g. "Tuesday evenings in NE Portland")"
+    rows="1"
+    aria-label="Search query"
+    autocomplete="off"
+    spellcheck="true"
+  ></textarea>
+
+  <button id="mic-btn" class="icon-btn" aria-label="Voice input" title="Speak your search">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+      <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+      <line x1="12" y1="19" x2="12" y2="23"/>
+      <line x1="8" y1="23" x2="16" y2="23"/>
+    </svg>
+  </button>
+
+  <button id="send-btn" class="icon-btn" aria-label="Send" disabled>
+    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <line x1="22" y1="2" x2="11" y2="13"/>
+      <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+    </svg>
+  </button>
+</div>
+
+<footer>
+  Need immediate help? Call NA helpline:
+  <a href="tel:+15033459839">(503) 345-9839</a>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>
